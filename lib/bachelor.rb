@@ -1,5 +1,21 @@
+require "pry"
+
 def get_first_name_of_season_winner(data, season)
-  # code here
+  
+  data.each do |seasons, info|
+    binding.pry
+    if seasons == season
+      info.each do |key, value|
+        
+        if key == "status"
+          if value == "Winner"
+            'x'
+          end
+        end
+      end
+    end
+  end
+          
 end
 
 def get_contestant_name(data, occupation)
